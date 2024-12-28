@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, Users }) {
 	const { join } = global.nodemodule["path"];
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Bypass bởi Mai Huy Bảo" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
+		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "mirai bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		return api.sendMessage(`Kết nối thành công\nBot vẫn hành bởi Ngô Trung Kiên\nFb.com/NgoTrungKien.User\nDấu lệnh của bot là -\nChúc các bạn sài bot vui vẻ!!!`, threadID);
 	}
 	else {
